@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Draw a blue rectangle (canvas version)</title>
+    </head>
+    <body onload="main()">
+        <div class="drawing-canvas">
+            <canvas id="example" width="400" height="400">
+                Please use a browser that supports "canvas"
+            </canvas>
+        </div>
+        <div class="inputs">
+            <label for="x1"style="font-size: large;">v1: x</label>
+            <input id="x1" style="width: 5rem;"></input>
+            <label for="y1" style="font-size: large;">y</label>
+            <input id="y1" style="width: 5rem;"></input>
+        </div>
+        <div class="inputs">
+            <label for="x2" style="font-size: large;">v2: x</label>
+            <input id="x2" style="width: 5rem;"></input>
+            <label for="y2" style="font-size: large;">y</label>
+            <input id="y2" style="width: 5rem;"></input>
+        </div>
+        <div class="draw-button"> 
+            <!--https://www.quora.com/How-do-you-create-a-button-inside-of-an-input-in-HTML#:~:text=You%20can%20create%20a%20button,%22Enter%20your%20search%20query%22%3E-->
+            <input type="button" value="Draw" onclick="handleDrawEvent()"></input>
+        </div>
+        <div>
+            <label for="operation" style="font-size: large; font-weight: 600;">Operation:</label>
+            <select id="operation" >
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+                <option value="angle">Angle Between</option>
+                <option value="area">Area</option>
+                <option value="magnitude">Magnitude</option>
+                <option value="normalize">Normalize</option>
+            </select>
+            <label for="scalar" style="font-size: large; font-weight: 600;">Scalar:</label>
+            <input id="scalar" style="width: 5rem;"></input>
+        </div>
+        <div class="draw-button"> 
+            <input type="button" value="Draw" onclick="handleDrawOperationEvent()"></input>
+        </div>
+        <script src="../lib/cuon-matrix-cse160.js"></script>
+        <script src="asg0.js"></script>
+    </body>
+</html> 
